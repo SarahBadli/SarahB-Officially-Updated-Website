@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah Website</title>
+         <link rel="icon" type="image/x-icon" href="sarah logo 2.png">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <link rel="stylesheet" href="style2.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="index.html">SARAH B</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Education.html">Education</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Experience.html">Experience</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ContactMe.html">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Photos.html">写真とビデオ</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- Home Section -->
+<section id="home" class="vh-100 d-flex justify-content-center align-items-center text-center bg-primary text-white">
+    <div>
+      <span is="type-async" id="type-text"></span>
+        <h1 class="display-4">Welcome to My Space Website</h1>
+        <p class="lead">SIIT SARAH BINTI BADLI (WORLD)</p>
+        <p><span class="blinking-cursor"></span></p>
+        <a href="CVsarahB.pdf" class="btn btn-outline-light">Download CV</a>
+    </div>
+</section>
+<span class="blinking-cursor"></span>
+<!-- About Section -->
+ <section>
+<div class=" container">
+  <aside>
+    <!--   <img src="https://picsum.photos/500/300" alt=""> -->
+    <iframe width="560" height="315" src="li vid.MP4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </aside>
+  </div>
+</section>
+<div class="container">
+  <div class="box"><h2 class="text-center">About Me</h2>
+        <p class="text-center">I'm a final year student in <b>Diploma Information Management (IM110) </b> 
+          <br>This is my official website 
+          <br> i hope you like it!!! 
+          <br>
+          <section>
+            <h5>Name:</h5><p>Siti Sarah Binti Badli</p>
+            <p><h5>Birth Date :</h5> 12 Oktober 2002 </p>
+            <p><h5>Age:</h5> 22 years old </p>
+            <p><h5>Address :</h5>
+              <Address>Block A Tkt 4 No 4, Pangsapuri Ampang Mewah, Jalan Mewah 6 , 68000 Ampang Selangor</Address></h3> 
+            <p><h5>No Telephone :</h5> 0124339202 </p>
+            <p><h5>Email :</h5> sarahbd906@gmail.com </p>
+            <p><h5>MBTI :</h5> ESFJ-T </p></div>
+<section id="about" class="py-5 bg-secondary text-white">
+    <div class="about-content">
+      
+  </div>  
+          </section> 
+    </div>
+</section>
+
+</section>
+<section>
+<a href="https://poki.com/en/g/lunar-knight" class="link-button ,justify-content-center, align-items-center, text-center" target="_blank">Wanna Play?</a>
+</section>
+<!-- Footer -->
+ 
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 My Space Website | Designed  <i class="fa fa-heart"></i> by Me</p>
+   
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="scripts.js"> </script>
+<script>async function init () {
+  const node = document.querySelector("#type-text")
+  
+  await sleep(1000)
+  node.innerText = ""
+  await node.type('Hello, ')
+ 
+  while (true) {
+    await node.type('Folks!')
+    await sleep(2000)
+    await node.delete('Folks!')
+    await node.type('World!')
+    await sleep(2000)
+    await node.delete('World!')
+  }
+}
+
+
+// Source code 🚩
+
+const sleep = time => new Promise(resolve => setTimeout(resolve, time))
+
+class TypeAsync extends HTMLSpanElement {
+  get typeInterval () {
+    const randomMs = 100 * Math.random()
+    return randomMs < 50 ? 10 : randomMs
+  }
+  
+  async type (text) {
+    for (let character of text) {
+      this.innerText += character
+      await sleep(this.typeInterval)
+    }
+  }
+  
+  async delete (text) {
+    for (let character of text) {
+      this.innerText = this.innerText.slice(0, this.innerText.length -1)
+      await sleep(this.typeInterval)
+    }
+  }
+}
+
+customElements.define('type-async', TypeAsync, { extends: 'span' })
+init()
+</script>
+<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+</body>
+</html>

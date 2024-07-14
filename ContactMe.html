@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah Website</title>
+         <link rel="icon" type="image/x-icon" href="sarah logo 2.png">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <link rel="stylesheet" href="style2.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="fullscreen-video-wrap">
+      <video autoplay muted loop class="video-background">
+        <source src="spacevid.mp4" type="video/mp4">
+    </video>
+    </div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="index.html">SARAH B</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Education.html">Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Experience.html">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ContactMe.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Photos.html">写真とビデオ</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  </section>
+   <div class="container">
+        <h2 class="text-center">Drop Your Note To Me!</h2>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputName">Name</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Name">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputMessage">Message</label>
+                <textarea class="form-control" id="inputMessage" rows="4" placeholder="Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </div>
+
+  </body>
+</html>
+

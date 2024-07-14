@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah Website</title>
+         <link rel="icon" type="image/x-icon" href="sarah logo 2.png">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <link rel="stylesheet" href="style2.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="index.html">SARAH B</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Education.html">Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Experience.html">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ContactMe.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Photos.html">Photos</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+<button id="audio-control"justify="center" onclick="toggleAudio()">Pause</button>
+<div class="fullscreen-video-wrap">
+  <video autoplay muted loop class="video-background">
+    <source src="spacevid.mp4" type="video/mp4">
+</video>
+</div>
+<div class="header-1">
+  <h2>Inside my memory</h2>
+  <p>(hover over to pause)</p>  
+ </div>
+
+	<div id="wrapper">
+		<div id="image">
+			<div class="image i1"><img src="sidesarah.jpg"  width="300" height="400"></div>
+			<div class="image i2"><img src="11.jpg" width="300" height="400"></div>
+			<div class="image i3"><img src="2.jpg" width="300" height="400"></div>
+			<div class="image i4"><img src="7.jpg" width="300" height="400"></div>
+			<div class="image i5"><img src="9.jpg" width="300" height="400"></div>
+			<div class="image i6"><img src="familysarah.jpg"  width="300" height="400"></div>
+			<div class="image i7"><img src="14.jpg" width="300" height="400"></div>
+			<div class="image i8"><img src="9.jpg"width="300" height="400"></div>
+      <div class="image i9"><img src="13.jpg" width="300" height="400"></div>
+      <div class="image i13"><img src="1.jpg" width="300" height="400"></div>
+		</div>
+	</div>
+  
+
+      <!-- Hidden audio element -->
+ <audio id="background-audio" autoplay loop>
+  <source src="newjeans - how sweet (nagii jersey remix).mp3" type="audio/mpeg">
+  <source src="newjeans - how sweet (nagii jersey remix).mp3" type="audio/ogg">
+     <script>
+      const audio = document.getElementById('background-audio');
+      const audioControl = document.getElementById('audio-control');
+    
+      function toggleAudio() {
+          if (audio.paused) {
+              audio.play();
+              audioControl.textContent = 'Pause';
+          } else {
+              audio.pause();
+              audioControl.textContent = 'Play';
+          }
+      }
+    </script>
+ </body>
+</html>
